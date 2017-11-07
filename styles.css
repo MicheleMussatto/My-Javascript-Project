@@ -1,0 +1,104 @@
+body {
+  background-color: #030319;
+  font-family: 'Questrial', sans-serif;
+  color: #9FACE1;
+  letter-spacing: 1.5px;
+}
+.thumbnail {
+  max-width: 100%;
+}
+h2 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+b {
+  color: #D65E55;
+}
+.response {
+  color: white;
+  font-weight: bold;
+}
+.flexbox {
+  -webkit-flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  border: solid 1px white;
+}
+.leftflex {
+  -webkit-flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: solid 1px white;
+  flex: 3;
+}
+.pickers {
+  -webkit-flex: 1;
+  flex: 1;
+  border: solid 1px white;
+  padding: 10px;
+}
+.artwindow {
+  -webkit-flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex: 10;
+  border: solid 1px white;
+  padding: 10px;
+}
+.art {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.image {
+  max-height: 250px;
+  max-width: 600px;
+}
+.description {
+  -webkit-flex: 1;
+  flex: 4;
+  padding: 10px;
+  line-height: 80%;
+}
+.pickbuttons {
+  -webkit-flex: 1;
+  flex: 1;
+  border: solid 1px white;
+  padding: 10px;
+}
+.rightflex {
+  -webkit-flex: 1;
+  padding: 10px;
+  border: solid 1px white;
+  flex: 1;
+  -webkit-flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.favesHeader {
+  -webkit-flex: 1;
+  flex: 1;
+  border: solid 1px white;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+
+}
+.favesWindow {
+  -webkit-flex: 1;
+  flex: 4;
+  border: solid 1px white;
+  padding: 10px;
+}
+.favesEmail {
+  -webkit-flex: 1;
+  flex: 1;
+  border: solid 1px white;
+  padding: 10px;
+  font-size: 14px;
+}
+#thumbnail {
+  height: 75px;
+}

@@ -1,0 +1,201 @@
+[
+{ "id": 1,
+  "name": "Bottles",
+	"medium": "Watercolor",
+	"subject": "Still Life",
+  "category": "Fine Art",
+	"image": "Images/Bottle_Watercolor.jpg"
+},
+{
+	"id": 2,
+  "name": "Frank Bello",
+	"medium": "Photography",
+	"subject": "Music",
+  "category": "Photography",
+	"image": "Images/Frank_Bello_Anthrax_Killthrax_2017.jpg"
+},
+{
+	"id": 3,
+  "name": "Ho Oh No!",
+	"medium": "Digital",
+	"subject": "Promo",
+  "category": "Graphic Design",
+	"image": "Images/Ho_Oh_No!_Cartoon.jpg"
+},
+{
+	"id": 4,
+  "name": "MM Type",
+	"medium": "Ink",
+	"subject": "Promo",
+  "category": "Graphic Design",
+	"image": "Images/Michele_Mussatto_Type_Design.jpg"
+},
+{
+	"id": 5,
+  "name": "Pillow",
+	"medium": "Photography",
+	"subject": "Still Life",
+  "category": "Photography",
+	"image": "Images/Pillow_Photograph.jpg"
+},
+{
+	"id": 6,
+  "name": "Loft vs Distance",
+	"medium": "Digital",
+	"subject": "Instructional",
+  "category": "Illustration",
+	"image": "Images/Planning_Your_Approach_Shot_Loft_vs_Distance.jpg"
+},
+{
+	"id": 7,
+  "name": "Dad",
+	"medium": "Pencil",
+	"subject": "Faces",
+  "category": "Fine Art",
+	"image": "Images/Portrait_Dad.jpg"
+},
+{
+	"id": 8,
+  "name": "Mallore",
+	"medium": "Pencil",
+	"subject": "Faces",
+  "category": "Fine Art",
+	"image": "Images/Portrait_Mallore.jpg"
+},
+{
+	"id": 9,
+  "name": "Scott Ian",
+	"medium": "Photography",
+	"subject": "Music",
+  "category": "Photography",
+	"image": "Images/Scott_Ian_Anthrax_Killthrax_Tour_ 2017_1.jpg"
+},
+{
+	"id": 10,
+  "name": "Sex Sells",
+	"medium": "Silkscreen",
+	"subject": "Sex",
+  "category": "Graphic Design",
+	"image": "Images/Sex_&_Death_Silkscreen_1.jpg"
+},
+{
+	"id": 11,
+  "name": "Drawing Class",
+	"medium": "Pencil",
+	"subject": "Still Life",
+  "category": "Fine Art",
+	"image": "Images/Still_Life_Outside_Pencil.jpg"
+},
+{
+	"id": 12,
+  "name": "UnRated Skull Logo",
+	"medium": "Digital",
+	"subject": "Music",
+  "category": "Logos",
+	"image": "Images/UnRated_Metal_Skull_Logo.jpg"
+},
+{
+	"id": 13,
+  "name": "UnRated Metal Logo",
+	"medium": "Digital",
+	"subject": "Music",
+  "category": "Logos",
+	"image": "Images/UnRated_Metal_Steel_Logo.jpg"
+},
+{
+	"id": 14,
+  "name": "WZ Seminar Email",
+	"medium": "Digital",
+	"subject": "Promo",
+  "category": "Graphic Design",
+	"image": "Images/WZ_Seminar_Flyer.jpg"
+},
+{
+	"id": 15,
+  "name": "Harry Mussatto Golf Course Logo 1",
+	"medium":"Digital",
+	"subject": "Logos",
+  "category": "Promo",
+	"image": "Images/Harry_Mussatto_Golf_Course_Logo_1.jpg"
+},
+{
+	"id": 16,
+  "name": "High Sign Design Logo",
+	"medium": "Digital",
+	"subject": "Promo",
+  "category": "Logos",
+	"image": "Images/high_sign_design_logo.jpg"
+},
+{
+	"id": 17,
+  "name": "Southwest Still Life",
+	"medium": "Pencil",
+	"subject": "Still Life",
+  "category": "Fine Art",
+	"image": "Images/Southwest_Design_Pencil.jpg"
+},
+{
+	"id": 18,
+  "name": "Approach Shot Step 1",
+	"medium": "Digital",
+	"subject": "Instructional",
+  "category": "Illustration",
+	"image": "Images/Planning_Your_Approach_Shot_Step_1.jpg"
+},
+{
+	"id": 19,
+  "name": "Metra Annual Report",
+	"medium": "Digital",
+	"subject": "Promo",
+  "category": "Graphic Design",
+	"image": "Images/Metra_Annual_Report_Cover.jpg"
+},
+{
+	"id": 20,
+  "name": "Windish Woods",
+	"medium": "Ink",
+	"subject": "Nature",
+  "category": "Illustration",
+	"image": "Images/Residential_Facility_Ink_Drawing.jpg"
+},
+{
+	"id": 21,
+  "name": "Education Day T-Shirt",
+	"medium": "Silkscreen",
+	"subject": "Promo",
+  "category": "Illustration",
+	"image": "Images/Education_Day_T-Shirt_Design.jpg"
+},
+{
+	"id": 22,
+  "name": "Argyle Lake Sunset",
+	"medium": "Silkscreen",
+	"subject": "Nature",
+  "category": "Illustration",
+	"image": "Images/Argyle_Silkscreen.jpg"
+},
+{
+	"id": 23,
+  "name": "Grayson Hurd",
+	"medium": "Photography",
+	"subject": "Music",
+  "category": "Photography",
+	"image": "Images/Grayson_Hurd_LFTF_Breaking Skin_2014.jpg"
+},
+{
+	"id": 24,
+  "name": "WIU Fine Art",
+	"medium": "Silkscreen",
+	"subject": "Promo",
+  "category": "Graphic Design",
+	"image": "Images/WIU_Fine_Art_Graphic.jpg"
+},
+{
+	"id": 25,
+  "name": "UnRated Fire Logo",
+	"medium": "Digital",
+	"subject": "Music",
+  "category": "Logos",
+	"image": "Images/UnRated_Fire_Logo.jpg"
+}
+]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+    <!-- <script type="text/json" src="michele_art.json"></script> -->
+    <title>Javascript Project</title>
+  </head>
+  <body>
+    <h1>Search My Art!</h1>
+    <img src="Images/Thumbnail_Montage.png" alt="Thumbnails of Artwork" class=thumbnail>
+    <h2>Choose a <b>Category</b>, <b>Subject</b> and <b>Medium</b>, and see what comes up! If you like it, save it as a <b>Fave</b>. If you want it for yourself, <b>Email me!</b></h2>
+    <div class=flexbox>
+      <div class=leftflex>
+        <section class=pickers>
+        <select class=artSelect id="categorySelector">
+          <option disabled selected value>CATEGORY</option>
+          <option value="ANY">ANY</option>
+          <option value="Fine Art">Fine Art</option>
+          <option value="Logos">Logos</option>
+          <option value="Graphic Design">Graphic Design</option>
+          <option value="Photography">Photography</option>
+          <option value="Illustration">Illustration</option>
+        </select>
+        <select class=artSelect id=subjectSelector>
+          <option disabled selected value>SUBJECT</option>
+          <option value="ANY">ANY</option>
+          <option value="Faces">Faces</option>
+          <option value="Still Life">Still Life</option>
+          <option value="Music">Music</option>
+          <option value="Sex">Sex</option>
+          <option value="Nature">Nature</option>
+          <option value="Promo">Promo</option>
+          <option value="Instructional">Instructional</option>
+        </select>
+        <select class=artSelect id=mediumSelector>
+          <option disabled selected value>MEDIUM</option>
+          <option value="ANY">ANY</option>
+          <option value="Silkscreen">Silkscreen</option>
+          <option value="Lithography">Lithography</option>
+          <option value="Photography">Photography</option>
+          <option value="Pencil">Pencil</option>
+          <option value="Ink">Ink</option>
+          <option value="Watercolor">Watercolor</option>
+          <option value="Digital">Digital</option>
+        </select>
+        <input id="go" type="submit" value="GO!">
+        </section>
+        <section class=artwindow>
+          <article class=art>
+            <img class=image id="image" alt="image of artwork"/>
+          </article>
+          <article class=description onload="getArt()">
+            <p>TITLE: &nbsp;&nbsp; </p><p class=response id="name"></p>
+            <p>CATEGORY: &nbsp;&nbsp; </p><p class=response id="category"></p>
+            <p>SUBJECT: &nbsp;&nbsp; </p><p class=response id="subject"></p>
+            <p>MEDIUM: &nbsp;&nbsp; </p><p class=response id="medium"></p>
+
+          </article>
+        </section>
+        <section class=pickbuttons>
+           <input id="pickAnother" type="submit" value="Pick Another">
+           <input id="addFave" type="submit" value="Add to Faves">
+
+        </section>
+      </div>
+      <div class=rightflex>
+        <section class=favesHeader><b>Faves</b></section>
+        <section class=favesWindow>
+          <img class=thumbnail id="thumbnail" alt="Click on Add to Faves.">
+        </section>
+        <section class=favesEmail>Want it, or one like it, for yourself? Click on the image to <b>email</b> me!</section>
+      </div>
+    </div>
+  <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>
