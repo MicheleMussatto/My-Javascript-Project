@@ -1,39 +1,40 @@
 'use strict';
-//This function called getArt requests data from the json file randomly upon page refresh then returns the results in the HTML
-getArt();
-let globalData;
+//This function called testSelectors requests data from the json file randomly upon page refresh then returns the results in the HTML
+// testSelectors();
+// let globalData;
 
-function getArt() {
-  let ajaxRequest = new XMLHttpRequest();
-  ajaxRequest.onreadystatechange = function() {
-    console.log(ajaxRequest.readyState);
-    if(ajaxRequest.readyState == 4) {
-      if(ajaxRequest.status == 200) {
-        // console.log(ajaxRequest.responseText);
-        let id = Math.floor(Math.random() * 25);
-        console.log(id);
-        let data = JSON.parse(ajaxRequest.responseText);
-        globalData = data[id];
-        document.getElementById('name').innerHTML = data[id].name;
-        document.getElementById('category').innerHTML = data[id].category;
-        document.getElementById('subject').innerHTML = data[id].subject;
-        document.getElementById('medium').innerHTML = data[id].medium;
-        document.getElementById('image').src = data[id].image;
-
-      }
-      else{
-        console.log("Status error: " + ajaxRequest.status);
-      }
-    }
-    else{
-		console.log("Ignored readyState: " + ajaxRequest.readyState);
-	 }
-  }
-  ajaxRequest.open('GET', 'https://www.tallgrassschool.com/cohort_1/students/mm/javascript_project/michele_art.json');
-  ajaxRequest.send();
-}
+// function getArt() {
+//   let ajaxRequest = new XMLHttpRequest();
+//   ajaxRequest.onreadystatechange = function() {
+//     console.log(ajaxRequest.readyState);
+//     if(ajaxRequest.readyState == 4) {
+//       if(ajaxRequest.status == 200) {
+//         console.log(ajaxRequest.responseText);
+//         let id = Math.floor(Math.random() * 25);
+//         console.log(id);
+//         let data = JSON.parse(ajaxRequest.responseText);
+//         globalData = data[id];
+//         document.getElementById('name').innerHTML = data[id].name;
+//         document.getElementById('category').innerHTML = data[id].category;
+//         document.getElementById('subject').innerHTML = data[id].subject;
+//         document.getElementById('medium').innerHTML = data[id].medium;
+//         document.getElementById('image').src = data[id].image;
+//       }
+//       else{
+//         console.log("Status error: " + ajaxRequest.status);
+//       }
+//     }
+//     else{
+// 		console.log("Ignored readyState: " + ajaxRequest.readyState);
+// 	 }
+//   }
+//   ajaxRequest.open('GET', 'https://www.tallgrassschool.com/cohort_1/students/mm/javascript_project/michele_art.json');
+//   ajaxRequest.send();
+// }
 
 //This function called testSelectors requests data from the json file randomly upon button click until the data matches the conditions then returns the results in the HTML
+testSelectors();
+let globalData;
 document.getElementById("go").addEventListener("click", testSelectors);
 function testSelectors (){
   let ajaxRequest = new XMLHttpRequest();
@@ -42,32 +43,40 @@ function testSelectors (){
     if(ajaxRequest.readyState == 4) {
       if(ajaxRequest.status == 200) {
 
+        // let id = 0;
+        // while (id < 26) {
+        //   id++;
+        //   return id;
+        //   }
+        // console.log(id);
+
         let id = Math.floor(Math.random() * 25);
         console.log(id);
-        let data = JSON.parse(ajaxRequest.responseText);
 
+        let data = JSON.parse(ajaxRequest.responseText);
+        globalData = data[id];
         let categorySelector = document.getElementById('categorySelector');
         let subjectSelector = document.getElementById('subjectSelector');
         let mediumSelector = document.getElementById('mediumSelector');
 
-        if (categorySelector.value == "") {
-          categorySelector.value = "ANY";
-
-        }
-        if (subjectSelector.value == "") {
-          subjectSelector.value = "ANY";
-
-        }
-        if (mediumSelector.value == "") {
-          mediumSelector.value = "ANY";
-
-        }
+        // if (categorySelector.value == "") {
+        //   categorySelector.value = "ANY";
+        //
+        // }
+        // if (subjectSelector.value == "") {
+        //   subjectSelector.value = "ANY";
+        //
+        // }
+        // if (mediumSelector.value == "") {
+        //   mediumSelector.value = "ANY";
+        //
+        // }
         if (
-          (categorySelector.value == data[id].category || categorySelector.value == "ANY")
+          (categorySelector.value == data[id].category || categorySelector.value == "ANY" || categorySelector.value == "")
          &&
-          (subjectSelector.value == data[id].subject || subjectSelector.value == "ANY")
+          (subjectSelector.value == data[id].subject || subjectSelector.value == "ANY" || subjectSelector.value == "")
          &&
-          (mediumSelector.value == data[id].medium || mediumSelector.value == "ANY")
+          (mediumSelector.value == data[id].medium || mediumSelector.value == "ANY" || mediumSelector.value == "")
         )
 
         // if (categorySelector.value == data[id].category || categorySelector.value == "ANY") {
@@ -82,14 +91,9 @@ function testSelectors (){
             document.getElementById('medium').innerHTML = data[id].medium;
             document.getElementById('image').src = data[id].image;
 
-
-
-
-
-
           }
         else {
-          console.log("didn't find one");
+        console.log("didn't find one");
         testSelectors();
         }
       }
@@ -109,9 +113,22 @@ function testSelectors (){
  let thumbnail = document.getElementById("thumbnail");
  document.getElementById("addFave").addEventListener("click",
    copyFaves);
- function copyFaves (){
+
+function copyFaves (){
+console.log("clicked");
+  if (thumbnail.src == "") {
   document.getElementById('thumbnail').src = globalData.image;
-   }
+  }
+  else if (thumbnail.src !== "") {
+    document.getElementById('thumbnail2').src = globalData.image;
+  }
+  else if (thumbnail.src !== "" && thumbnail2.src !== "") {
+    document.getElementById('thumbnail3').src = globalData.image;
+  }
+  else {
+    console.log("full");
+  }
+}
 
  //This event listener is supposed to cause clicking the Faves button to add a thumbnail of the chosen art into the Faves window.
  // document.getElementById("addFave").addEventListener("click",
@@ -123,7 +140,14 @@ function testSelectors (){
 
 
  //This event listener just tests the pick another button for now...
-  document.getElementById("pickAnother").addEventListener("click", getArt);
+  document.getElementById("reset").addEventListener("click", resetSelectors);
+  function resetSelectors () {
+    categorySelector.value = "";
+    subjectSelector.value = "";
+    mediumSelector.value = "";
+  }
+
+  //create a new function reset(), that sets the value of your selector dropdowns back to ""
 
 //JUST IGNORE THIS STUFF FROM HERE ON DOWN, IT'S MY PSUEDO SCRIPT AND MISC IDEAS
 // 1. getArt runs and pulls a random image from json
