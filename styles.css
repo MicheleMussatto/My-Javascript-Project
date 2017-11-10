@@ -3,16 +3,27 @@ body {
   font-family: 'Questrial', sans-serif;
   color: #9FACE1;
   letter-spacing: 1.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
 }
-.thumbnail {
+h1 {
+  line-height: 0.5;
+}
+.thumbMont {
   max-width: 100%;
+  border: solid 1px white;
 }
 h2 {
   font-size: 20px;
   font-weight: lighter;
 }
-b {
+.redBold {
   color: #D65E55;
+  font-weight: bold;
+}
+a {
+    text-decoration: none;
 }
 .response {
   color: white;
@@ -20,11 +31,9 @@ b {
 }
 .flexbox {
   -webkit-flex: 1;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  border: solid 1px white;
 }
 .leftflex {
   -webkit-flex: 1;
@@ -84,7 +93,6 @@ b {
   padding: 10px;
   font-size: 24px;
   text-align: center;
-
 }
 .favesWindow {
   -webkit-flex: 1;
@@ -97,7 +105,7 @@ b {
   flex: 1;
   border: solid 1px white;
   padding: 10px;
-  font-size: 14px;
+  font-size: 18px;
 }
 .thumbnail {
   height: 75px;

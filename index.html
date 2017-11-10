@@ -4,18 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-
-    <!-- <script type="text/json" src="michele_art.json"></script> -->
-    <title>Javascript Project</title>
+    <title>Search My Art!</title>
   </head>
   <body>
     <h1>Search My Art!</h1>
-    <img src="Images/Thumbnail_Montage.png" alt="Thumbnails of Artwork" class=thumbnail>
-    <h2>Choose a <b>Category</b>, <b>Subject</b> and <b>Medium</b>, and see what comes up! If you like it, save it as a <b>Fave</b>. If you want it for yourself, <b>Email me!</b></h2>
-    <div class=flexbox>
-      <div class=leftflex>
-        <section class=pickers>
-        <select class=artSelect id="categorySelector">
+    <img src="Images/Thumbnail_Montage.png" alt="Thumbnails of Artwork" class="thumbMont">
+    <h2>Choose a <span class="redBold">Category</span>, <span class="redBold">Subject</span> or <span class="redBold">Medium</span>, and see what comes up! If you like it, save it as a <span class="redBold">Fave</span>. If you want it for yourself, <a href="https://www.michelemussatto.com/contact" target="_blank"><span class="redBold">Email me!</span></a></h2>
+    <div class="flexbox">
+      <div class="leftflex">
+        <section class="pickers">
+        <select class="artSelect" id="categorySelector">
           <option disabled selected value>CATEGORY</option>
           <option value="ANY">ANY</option>
           <option value="Fine Art">Fine Art</option>
@@ -24,7 +22,7 @@
           <option value="Photography">Photography</option>
           <option value="Illustration">Illustration</option>
         </select>
-        <select class=artSelect id=subjectSelector>
+        <select class="artSelect" id="subjectSelector">
           <option disabled selected value>SUBJECT</option>
           <option value="ANY">ANY</option>
           <option value="Faces">Faces</option>
@@ -35,11 +33,10 @@
           <option value="Promo">Promo</option>
           <option value="Instructional">Instructional</option>
         </select>
-        <select class=artSelect id=mediumSelector>
+        <select class="artSelect" id="mediumSelector">
           <option disabled selected value>MEDIUM</option>
           <option value="ANY">ANY</option>
           <option value="Silkscreen">Silkscreen</option>
-          <option value="Lithography">Lithography</option>
           <option value="Photography">Photography</option>
           <option value="Pencil">Pencil</option>
           <option value="Ink">Ink</option>
@@ -48,38 +45,37 @@
         </select>
         <input id="go" type="submit" value="GO!">
         </section>
-        <section class=artwindow>
-          <article class=art>
-            <img class=image id="image" alt="image of artwork"/>
+        <section class="artwindow">
+          <article class="art">
+            <a id="imageLink">
+            <img class="image" id="image" alt="image of artwork"/>
+            </a>
           </article>
-          <article class=description onload="getArt()">
-            <p>TITLE: &nbsp;&nbsp; </p><p class=response id="name"></p>
-            <p>CATEGORY: &nbsp;&nbsp; </p><p class=response id="category"></p>
-            <p>SUBJECT: &nbsp;&nbsp; </p><p class=response id="subject"></p>
-            <p>MEDIUM: &nbsp;&nbsp; </p><p class=response id="medium"></p>
-
+          <article class="description" onload="getArt()">
+            <p>TITLE: &nbsp;&nbsp; </p><p class="response" id="name"></p>
+            <p>CATEGORY: &nbsp;&nbsp; </p><p class="response" id="category"></p>
+            <p>SUBJECT: &nbsp;&nbsp; </p><p class="response" id="subject"></p>
+            <p>MEDIUM: &nbsp;&nbsp; </p><p class="response" id="medium"></p>
           </article>
         </section>
-        <section class=pickbuttons>
+        <section class="pickbuttons">
            <input id="reset" type="submit" value="Reset">
            <input id="addFave" type="submit" value="Add to Faves">
-
         </section>
       </div>
-      <div class=rightflex>
-        <section class=favesHeader><b>Faves</b></section>
-        <section class=favesWindow>
-          <img class=thumbnail id="thumbnail" alt="#1">
-          <img class=thumbnail id="thumbnail2" alt="#2">
-          <img class=thumbnail id="thumbnail3" alt="#3">
-          <img class=thumbnail id="thumbnail4" alt="#4">
-          <img class=thumbnail id="thumbnail5" alt="#5">
-          <img class=thumbnail id="thumbnail6" alt="#6">
+      <div class="rightflex">
+        <section class="favesHeader"><span class="redBold">Faves</span></section>
+        <section class="favesWindow">
+          <img class="thumbnail" id="thumbnail" alt="#1">
+          <img class="thumbnail" id="thumbnail2" alt="#2">
+          <img class="thumbnail" id="thumbnail3" alt="#3">
+          <img class="thumbnail" id="thumbnail4" alt="#4">
+          <img class="thumbnail" id="thumbnail5" alt="#5">
+          <img class="thumbnail" id="thumbnail6" alt="#6">
         </section>
-        <section class=favesEmail>Want it, or one like it, for yourself? Click on the image to <b>email</b> me!</section>
+        <section class="favesEmail">Want it, or one like it, for yourself? <a href="https://www.michelemussatto.com/contact" target="_blank"><span class="redBold">Email</span> </a> me!</section>
       </div>
     </div>
   <script type="text/javascript" src="script.js"></script>
-
   </body>
 </html>
